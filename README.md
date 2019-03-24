@@ -1,68 +1,32 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# React CRUD TDD Sample
 
-## Available Scripts
+## Instructions
 
-In the project directory, you can run:
+This repo contains an empty react app. Your job is to implement the following user stories in TDD fashion:
 
-### `npm start`
+1. Given a browser, when I browse to the site, then I see an "Add Person" button.
+1. Given I see the "Add Person" button, when I click it, then I am taken to an Add Person page.
+1. Given I am on the Add Person page, when I fill in the fields and click "Add", I am taken back to the list page.
+1. Given that I have added a person, when I am on the list page, then I see my people.
+1. Given that I see people in the list, when I click a person, I am taken to a Person Edit page.
+1. Given I am on the person edit page, when I change a persons name and click Save, then I am taken back to the list page.
+1. Given that I have made updates to people, when I am on the list page, I should see the modified information.
+1. Given that I am on the edit page, then I see a delete button.
+1. Given that I am on the edit page, when I click the delete button, then I am taken back to the list page.
+1. Given that I have deleted a person, when I am on the list page, then I no longer see the deleted people.
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Tips:
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+- Use [simulate](https://github.com/airbnb/enzyme/blob/master/docs/api/ShallowWrapper/simulate.md) to simulate text change and click events
+- Use sinon to stub the `onEdit()` call
+- Verify the stub was called with the correct arguments.
+- Use [controlled components](https://reactjs.org/docs/forms.html) for input.
 
-### `npm test`
+## Resources
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+- [Jest assertions](https://facebook.github.io/jest/docs/en/expect.html)
+- [Shallow rendering with Enzyme](http://airbnb.io/enzyme/docs/api/shallow.html)
+- [Shallow docs on GitHub](https://github.com/airbnb/enzyme/tree/master/docs/api/ShallowWrapper)
+- [Shallow find](http://airbnb.io/enzyme/docs/api/ShallowWrapper/find.html)
+- [Shallow simulate](http://airbnb.io/enzyme/docs/api/ShallowWrapper/simulate.html)
+- [Sinon docs](http://sinonjs.org/releases/v4.1.6/)
