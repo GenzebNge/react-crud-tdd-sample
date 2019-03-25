@@ -63,4 +63,6 @@ describe("App", () => {
 
 		expect(personEdit.props().addPerson).toEqual(wrapper.instance().addPerson);
 	});
+
+	// NEED TO REFACTOR WHEN CONDITIONAL RENDERING OF COMPONENTS KICK IN!!!;
 });
